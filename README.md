@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Spanisch mit Cristina — Landing Page
 
-## Getting Started
+Conversion-optimized German landing page for Cristina's Spanish lessons (online in Switzerland, on-site in Zürich). Built for Meta ad traffic. Lead capture via WhatsApp and email form.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router) + TypeScript
+- Tailwind CSS v4
+- `lucide-react` icons
+- Inter + Fraunces fonts (Google Fonts via `next/font`)
+- Meta Pixel preserved from existing site (ID `1141162654692153`)
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Opens at http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This repo auto-deploys to Vercel on push to `main`. To set up the Vercel project the first time:
 
-## Learn More
+1. Go to https://vercel.com/new
+2. Import `thopica/spanischlandingpage`
+3. Accept defaults (Next.js auto-detected)
+4. Deploy
 
-To learn more about Next.js, take a look at the following resources:
+After that, every `git push` triggers a new deploy.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment variables (set in Vercel dashboard)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Var | Used by | Required |
+| --- | --- | --- |
+| `NEXT_PUBLIC_WEB3FORMS_KEY` | Contact form (Feature 4) | Yes — sign up at https://web3forms.com (free, 60 sec) and paste the access key |
 
-## Deploy on Vercel
+## Feature roadmap
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [x] **Feature 1** — Foundation, Hero, sticky mobile CTA, Meta Pixel, SEO
+- [ ] **Feature 2** — Testimonials + Vorteile (benefits)
+- [ ] **Feature 3** — Methode + Preis + Über mich
+- [ ] **Feature 4** — FAQ + contact form (wired to Web3Forms → `mcristinacaamano@gmail.com`)
+- [ ] **Feature 5** — Footer, Impressum page, sitemap, polish
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project structure
+
+```
+app/
+  layout.tsx       # German locale, SEO meta, Meta Pixel
+  page.tsx         # Composes the landing page sections
+  globals.css      # Tailwind v4 + brand tokens
+  icon.svg         # Favicon
+components/
+  Header.tsx       # Minimal logo header (no nav links — single-goal page)
+  Hero.tsx         # Headline, CTAs, trust pills, photo
+  StickyMobileCta.tsx  # Fixed bottom bar, mobile only
+lib/
+  links.ts         # Single source of truth for WhatsApp / email / phone
+public/
+  images/cristina.jpg  # Photo from existing site
+```
