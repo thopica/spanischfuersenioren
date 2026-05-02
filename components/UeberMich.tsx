@@ -18,18 +18,18 @@ export function UeberMich() {
   return (
     <section className="bg-cream-dark px-4 py-20 md:px-8 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 md:items-center md:gap-14 lg:gap-20">
-        <div className="relative order-1 mx-auto w-full max-w-md md:order-1 md:mx-0">
+        <div className="relative order-1 mx-auto w-full max-w-sm md:order-1 md:mx-0">
           <div
             aria-hidden
             className="absolute -inset-3 -z-10 rounded-[2.5rem] bg-brand-200/60 md:-inset-5"
           />
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-brand-100 shadow-xl shadow-ink/15 ring-1 ring-ink/5">
+          <div className="relative aspect-square overflow-hidden rounded-[2rem] bg-brand-100 shadow-xl shadow-ink/15 ring-1 ring-ink/5">
             <Image
-              src="/images/cristina.jpg"
+              src="/images/cristina-portrait.jpg"
               alt="Cristina Caamaño – Spanisch-Lehrerin in Zürich"
               fill
-              sizes="(max-width: 768px) 100vw, 45vw"
-              className="object-cover object-[center_25%]"
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="object-cover"
             />
           </div>
 
