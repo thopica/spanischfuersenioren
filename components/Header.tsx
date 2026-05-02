@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
-import { WHATSAPP_URL } from "@/lib/links";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 
 export function Header() {
   return (
@@ -17,14 +17,12 @@ export function Header() {
             Spanisch <span className="text-brand-500">mit Cristina</span>
           </span>
         </Link>
-        <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+        <WhatsAppLink
+          source="header"
           className="hidden h-10 items-center gap-2 rounded-full bg-success px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-success-dark md:inline-flex"
         >
           <MessageCircle className="size-4" /> WhatsApp
-        </a>
+        </WhatsAppLink>
       </div>
     </header>
   );

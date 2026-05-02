@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, MessageCircle, Star } from "lucide-react";
-import { WHATSAPP_URL } from "@/lib/links";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 
 export function Hero() {
   return (
@@ -58,14 +58,12 @@ export function Hero() {
               Gratis Probelektion buchen
               <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
             </a>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppLink
+              source="hero"
               className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-ink/15 bg-white px-7 text-base font-semibold text-ink transition hover:border-success hover:bg-success/5 hover:text-success"
             >
               <MessageCircle className="size-5" /> WhatsApp schreiben
-            </a>
+            </WhatsAppLink>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-ink-soft">

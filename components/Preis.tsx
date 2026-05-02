@@ -1,5 +1,5 @@
 import { ArrowRight, Check, MessageCircle } from "lucide-react";
-import { WHATSAPP_URL } from "@/lib/links";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 
 const INCLUSIONS = [
   "60 Minuten reine Lektionszeit (kein 45-Minuten-Trick)",
@@ -83,14 +83,12 @@ export function Preis() {
               Gratis Probelektion buchen
               <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
             </a>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppLink
+              source="preis"
               className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-ink/15 px-6 text-base font-semibold text-ink transition hover:border-success hover:bg-success/5 hover:text-success-dark"
             >
               <MessageCircle className="size-5" /> WhatsApp
-            </a>
+            </WhatsAppLink>
           </div>
         </div>
 

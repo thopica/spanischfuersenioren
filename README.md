@@ -34,7 +34,24 @@ After that, every `git push` triggers a new deploy.
 
 | Var | Used by | Required |
 | --- | --- | --- |
-| `NEXT_PUBLIC_WEB3FORMS_KEY` | Contact form (Feature 4) | Yes — sign up at https://web3forms.com (free, 60 sec) and paste the access key |
+| `NEXT_PUBLIC_WEB3FORMS_KEY` | Contact form | Yes — see setup below |
+
+### Web3Forms setup (one-time, ~60 seconds)
+
+1. Go to https://web3forms.com → enter `mcristinacaamano@gmail.com` as the destination email → confirm.
+2. Copy the **access key** they email you (looks like a UUID, e.g. `1234abcd-...`).
+3. In Vercel: **Settings → Environment Variables → Add**
+   - Name: `NEXT_PUBLIC_WEB3FORMS_KEY`
+   - Value: *(paste the key)*
+   - Environments: Production, Preview, Development (all three)
+4. Redeploy (Vercel UI: **Deployments → ... → Redeploy**).
+
+If the key isn't set, the form falls back to a friendly error message pointing users to WhatsApp — so the page never appears broken.
+
+For local dev, create `.env.local` in the project root:
+```
+NEXT_PUBLIC_WEB3FORMS_KEY=your-key-here
+```
 
 ## Feature roadmap
 
