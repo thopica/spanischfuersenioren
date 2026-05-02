@@ -1,38 +1,39 @@
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 type Testimonial = {
   name: string;
   role: string;
   quote: string;
-  initial: string;
+  image: string;
 };
 
 const TESTIMONIALS: Testimonial[] = [
   {
     name: "Thomas",
     role: "Anfänger",
-    initial: "T",
+    image: "/images/thomas.png",
     quote:
       "Erstaunlich schnell konnte ich einfache Sätze auf Spanisch sagen. Vielen Dank Cristina!",
   },
   {
     name: "Regula",
     role: "Reisende",
-    initial: "R",
+    image: "/images/regula.png",
     quote:
       "Ich freue mich jedes Mal auf den Unterricht. Inzwischen kann ich mich ohne Probleme im Ausland auf Spanisch verständigen.",
   },
   {
     name: "Eva",
     role: "Fortgeschrittene",
-    initial: "E",
+    image: "/images/eva.png",
     quote:
       "In kurzer Zeit konnte ich gute Fortschritte machen, da Cristina den Unterricht genau an meine Wünsche und mein Tempo angepasst hat. So macht das Lernen sehr viel Spass und ich freue mich auf jede weitere Lektion.",
   },
   {
     name: "Pascal",
     role: "Unternehmer",
-    initial: "P",
+    image: "/images/pascal.png",
     quote:
       "Als Unternehmer ist meine Zeit knapp. Cristinas flexible Unterrichtszeiten ermöglichen es mir, Spanisch effektiv zu lernen, ohne meinen Arbeitsalltag zu stören.",
   },
@@ -75,12 +76,13 @@ export function Testimonials() {
               </blockquote>
 
               <div className="mt-4 flex items-center gap-2.5">
-                <span
-                  aria-hidden
-                  className="grid size-8 place-items-center rounded-full bg-brand-50 font-display text-sm font-semibold text-brand-700"
-                >
-                  {t.initial}
-                </span>
+                <Image
+                  src={t.image}
+                  alt={`Porträt von ${t.name}`}
+                  width={32}
+                  height={32}
+                  className="size-8 rounded-full object-cover"
+                />
                 <div className="text-xs leading-tight">
                   <div className="font-semibold text-ink">{t.name}</div>
                   <div className="text-ink-soft">{t.role}</div>
