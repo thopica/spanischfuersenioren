@@ -56,25 +56,44 @@ NEXT_PUBLIC_WEB3FORMS_KEY=your-key-here
 ## Feature roadmap
 
 - [x] **Feature 1** — Foundation, Hero, sticky mobile CTA, Meta Pixel, SEO
-- [ ] **Feature 2** — Testimonials + Vorteile (benefits)
-- [ ] **Feature 3** — Methode + Preis + Über mich
-- [ ] **Feature 4** — FAQ + contact form (wired to Web3Forms → `mcristinacaamano@gmail.com`)
-- [ ] **Feature 5** — Footer, Impressum page, sitemap, polish
+- [x] **Feature 2** — Testimonials + Vorteile (benefits)
+- [x] **Feature 3** — Methode + Preis + Über mich
+- [x] **Feature 4** — FAQ + contact form (wired to Web3Forms → `mcristinacaamano@gmail.com`)
+- [x] **Feature 5** — Footer, Impressum page, robots/sitemap, structured data, polish
+
+## Pending content TODOs (open in code)
+
+- `app/impressum/page.tsx` — fill in real **Strasse + Hausnummer** and **PLZ + Ort** (Swiss legal requirement when running paid ads)
+- `public/images/cristina.jpg` — replace with a real portrait of Cristina (currently the small Über-mich photo is reused; the hero still shows the original landscape promo image)
 
 ## Project structure
 
 ```
 app/
-  layout.tsx       # German locale, SEO meta, Meta Pixel
-  page.tsx         # Composes the landing page sections
-  globals.css      # Tailwind v4 + brand tokens
-  icon.svg         # Favicon
+  layout.tsx           # German locale, SEO meta, Meta Pixel
+  page.tsx             # Composes the landing page sections + LocalBusiness JSON-LD
+  globals.css          # Tailwind v4 + brand tokens
+  icon.svg             # Favicon
+  robots.ts            # robots.txt (allows all, points to sitemap)
+  sitemap.ts           # sitemap.xml (home + impressum)
+  impressum/page.tsx   # Swiss legal page (TODO: fill address)
 components/
-  Header.tsx       # Minimal logo header (no nav links — single-goal page)
-  Hero.tsx         # Headline, CTAs, trust pills, photo
-  StickyMobileCta.tsx  # Fixed bottom bar, mobile only
+  Header.tsx           # Minimal logo header
+  Hero.tsx             # Headline, CTAs, trust pills, photo
+  Testimonials.tsx     # 4 student quotes with stars
+  Vorteile.tsx         # 4 benefit cards (1:1, 60 Min, flexibel, keine Abos)
+  Methode.tsx          # 3-step explainer
+  Preis.tsx            # Dark-themed pricing card
+  UeberMich.tsx        # Bio + portrait + credential pills
+  Faq.tsx              # 5-entry accordion
+  Kontakt.tsx          # Form (Web3Forms) + side card with WhatsApp/email
+  Footer.tsx           # Contact + Impressum link + copyright
+  StickyMobileCta.tsx  # Fixed bottom bar, hides when contact section is visible
+  WhatsAppLink.tsx     # Tracked WhatsApp anchor (fires Meta Pixel Lead)
 lib/
-  links.ts         # Single source of truth for WhatsApp / email / phone
+  links.ts             # Single source of truth for WhatsApp / email / phone
+  track.ts             # Meta Pixel helpers (trackLead)
 public/
-  images/cristina.jpg  # Photo from existing site
+  images/cristina.jpg          # Hero photo
+  images/cristina-portrait.jpg # Über mich portrait
 ```
