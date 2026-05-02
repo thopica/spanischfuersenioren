@@ -1,6 +1,6 @@
-export const PHONE_DISPLAY = "+41 78 903 10 57";
-export const PHONE_TEL = "tel:+41789031057";
-const PHONE_DIGITS = "41789031057";
+export const PHONE_DISPLAY = "+41 77 292 09 03";
+export const PHONE_TEL = "tel:+41772920903";
+const PHONE_DIGITS = "41772920903";
 
 const WHATSAPP_PRESET = "Hola Cristina! Ich interessiere mich für eine gratis Probelektion.";
 

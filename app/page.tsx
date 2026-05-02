@@ -19,7 +19,7 @@ const STRUCTURED_DATA = {
     "Privatunterricht Spanisch mit Muttersprachlerin – online aus der ganzen Schweiz oder vor Ort in Zürich.",
   image: "https://onlinespanischlernen.ch/images/cristina.jpg",
   url: "https://onlinespanischlernen.ch",
-  telephone: "+41789031057",
+  telephone: "+41772920903",
   email: EMAIL,
   priceRange: "CHF 60",
   inLanguage: ["de", "es"],

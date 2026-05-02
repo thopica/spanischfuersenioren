@@ -31,11 +31,9 @@ export default function ImpressumPage() {
           <p className="mt-3 text-ink">
             Cristina Caamaño
             <br />
-            {/* TODO: Strasse + Hausnummer eintragen */}
-            <span className="text-ink-soft italic">[Strasse · Hausnummer]</span>
+            Friesstrasse 22
             <br />
-            {/* TODO: PLZ + Ort eintragen */}
-            <span className="text-ink-soft italic">[PLZ · Ort]</span>
+            8050 Zürich
             <br />
             Schweiz
           </p>
