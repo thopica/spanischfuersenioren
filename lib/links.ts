@@ -1,10 +1,11 @@
 export const PHONE_DISPLAY = "+41 77 292 09 03";
 export const PHONE_TEL = "tel:+41772920903";
-const PHONE_DIGITS = "41772920903";
 
-const WHATSAPP_PRESET = "Hola Cristina! Ich interessiere mich für eine gratis Probelektion.";
+const WHATSAPP_DIGITS = "41789031057";
+const WHATSAPP_PRESET =
+  "Hola Cristina! Ich interessiere mich für eine gratis Probelektion.";
 
-export const WHATSAPP_URL = `https://wa.me/${PHONE_DIGITS}?text=${encodeURIComponent(
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_DIGITS}?text=${encodeURIComponent(
   WHATSAPP_PRESET,
 )}`;
 
