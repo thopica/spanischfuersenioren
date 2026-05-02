@@ -1,4 +1,4 @@
-import { Quote, Star } from "lucide-react";
+import { Star } from "lucide-react";
 
 type Testimonial = {
   name: string;
@@ -40,7 +40,7 @@ const TESTIMONIALS: Testimonial[] = [
 
 export function Testimonials() {
   return (
-    <section className="bg-cream px-4 py-20 md:px-8 md:py-28">
+    <section className="bg-cream px-4 py-14 md:px-8 md:py-20">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-medium uppercase tracking-wider text-brand-700">
@@ -49,49 +49,39 @@ export function Testimonials() {
           <h2 className="mt-4 font-display text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl">
             Was meine Schüler:innen sagen
           </h2>
-          <p className="mt-3 text-base text-ink-soft sm:text-lg">
-            Über{" "}
-            <span className="font-semibold text-ink">15 Jahre Unterricht</span> –
-            hier sind ein paar ehrliche Stimmen.
-          </p>
         </div>
 
-        <ul className="mt-12 grid gap-5 md:mt-16 md:grid-cols-2 md:gap-6">
+        <ul className="mt-8 grid gap-4 sm:grid-cols-2 md:mt-10 lg:grid-cols-4">
           {TESTIMONIALS.map((t) => (
             <li
               key={t.name}
-              className="relative flex flex-col rounded-3xl bg-white p-7 shadow-sm ring-1 ring-ink/5 transition hover:-translate-y-0.5 hover:shadow-lg sm:p-8"
+              className="flex flex-col rounded-2xl bg-white p-5 shadow-sm ring-1 ring-ink/5 transition hover:-translate-y-0.5 hover:shadow-md"
             >
-              <Quote
-                aria-hidden
-                className="absolute right-6 top-6 size-8 text-brand-100"
-              />
-
               <div
-                className="flex items-center gap-1"
+                className="flex items-center gap-0.5"
                 aria-label="5 von 5 Sternen"
               >
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star
                     key={i}
                     aria-hidden
-                    className="size-4 fill-brand-400 text-brand-400"
+                    className="size-3.5 fill-brand-400 text-brand-400"
                   />
                 ))}
               </div>
 
-              <blockquote className="mt-5 grow text-base leading-relaxed text-ink/90 sm:text-[1.05rem]">
+              <blockquote className="mt-3 grow text-sm leading-relaxed text-ink/85">
                 {t.quote}
               </blockquote>
 
-              <div className="mt-6 flex items-center gap-3 border-t border-ink/5 pt-5">
+              <div className="mt-4 flex items-center gap-2.5">
                 <span
                   aria-hidden
-                  className="grid size-11 place-items-center rounded-full bg-brand-50 font-display text-lg font-semibold text-brand-700"
+                  className="grid size-8 place-items-center rounded-full bg-brand-50 font-display text-sm font-semibold text-brand-700"
                 >
                   {t.initial}
                 </span>
-                <div className="text-sm leading-tight">
+                <div className="text-xs leading-tight">
                   <div className="font-semibold text-ink">{t.name}</div>
                   <div className="text-ink-soft">{t.role}</div>
                 </div>
