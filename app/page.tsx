@@ -43,10 +43,10 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Testimonials />
         <Vorteile />
         <Methode />
         <Preis />
+        <Testimonials />
         <UeberMich />
         <Faq />
         <Kontakt />
