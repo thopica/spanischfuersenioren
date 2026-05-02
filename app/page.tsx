@@ -1,7 +1,10 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { Methode } from "@/components/Methode";
+import { Preis } from "@/components/Preis";
 import { StickyMobileCta } from "@/components/StickyMobileCta";
 import { Testimonials } from "@/components/Testimonials";
+import { UeberMich } from "@/components/UeberMich";
 import { Vorteile } from "@/components/Vorteile";
 
 export default function Home() {
@@ -12,6 +15,9 @@ export default function Home() {
         <Hero />
         <Testimonials />
         <Vorteile />
+        <Methode />
+        <Preis />
+        <UeberMich />
 
         {/* Placeholder so hero CTAs have a target. Replaced in Feature 4. */}
         <section
