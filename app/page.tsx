@@ -1,6 +1,8 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { StickyMobileCta } from "@/components/StickyMobileCta";
+import { Testimonials } from "@/components/Testimonials";
+import { Vorteile } from "@/components/Vorteile";
 
 export default function Home() {
   return (
@@ -8,11 +10,13 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Testimonials />
+        <Vorteile />
 
         {/* Placeholder so hero CTAs have a target. Replaced in Feature 4. */}
         <section
           id="kontakt"
-          className="border-t border-brand-100/80 bg-cream-dark px-4 py-20 text-center"
+          className="border-t border-brand-100/80 bg-cream px-4 py-20 text-center"
         >
           <div className="mx-auto max-w-2xl">
             <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
