@@ -16,7 +16,7 @@ const fraunces = Fraunces({
   axes: ["opsz"],
 });
 
-const META_PIXEL_ID = "1141162654692153";
+const META_PIXEL_ID = "838735575945300";
 const SITE_URL = "https://onlinespanischlernen.ch";
 
 export const metadata: Metadata = {

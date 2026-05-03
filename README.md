@@ -8,7 +8,7 @@ Conversion-optimized German landing page for Cristina's Spanish lessons (online 
 - Tailwind CSS v4
 - `lucide-react` icons
 - Inter + Fraunces fonts (Google Fonts via `next/font`)
-- Meta Pixel preserved from existing site (ID `1141162654692153`)
+- Meta Pixel (ID `838735575945300`)
 
 ## Run locally
 
