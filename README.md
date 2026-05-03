@@ -24,7 +24,7 @@ Opens at http://localhost:3000
 This repo auto-deploys to Vercel on push to `main`. To set up the Vercel project the first time:
 
 1. Go to https://vercel.com/new
-2. Import `thopica/spanischlandingpage`
+2. Import `thopica/spanischfuersenioren`
 3. Accept defaults (Next.js auto-detected)
 4. Deploy
 
