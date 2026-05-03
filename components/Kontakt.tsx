@@ -361,7 +361,10 @@ function Field({
       {hint && !error && (
         <span className="mt-0.5 block text-xs text-ink-soft">{hint}</span>
       )}
-      <div className="mt-1.5">{children}</div>
+      {/* Password managers (e.g. LastPass) inject nodes into inputs — suppress mismatch noise */}
+      <div className="mt-1.5" suppressHydrationWarning>
+        {children}
+      </div>
       {error && (
         <span className="mt-1.5 block text-xs font-medium text-accent">
           {error}
