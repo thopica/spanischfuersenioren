@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { MessageCircle } from "lucide-react";
-import { WhatsAppLink } from "@/components/WhatsAppLink";
+import { Phone } from "lucide-react";
+import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/links";
+import { trackLead } from "@/lib/track";
 
 export function StickyMobileCta() {
   const [hidden, setHidden] = useState(false);
@@ -27,13 +28,14 @@ export function StickyMobileCta() {
       }`}
     >
       <div className="flex gap-2">
-        <WhatsAppLink
-          source="sticky-mobile"
-          ariaLabel="Auf WhatsApp schreiben"
-          className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-full bg-success text-sm font-semibold text-white shadow-md transition active:bg-success-dark"
+        <a
+          href={PHONE_TEL}
+          onClick={() => trackLead("phone-sticky-mobile")}
+          className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-full border border-ink/15 bg-white text-sm font-semibold text-ink shadow-md transition active:bg-brand-50"
+          aria-label={`Cristina anrufen: ${PHONE_DISPLAY}`}
         >
-          <MessageCircle className="size-4" /> WhatsApp
-        </WhatsAppLink>
+          <Phone className="size-4" /> Anrufen
+        </a>
         <a
           href="#kontakt"
           className="inline-flex h-12 flex-[1.6] items-center justify-center rounded-full bg-ink text-sm font-semibold text-cream shadow-md transition active:bg-brand-500"

@@ -22,8 +22,8 @@ export function Footer() {
             </span>
           </Link>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-cream/65">
-            Massgeschneiderter Spanischunterricht — online aus der ganzen
-            Schweiz oder vor Ort in Zürich.
+            Persönlicher Spanisch-Einzelunterricht. In deinem Tempo, online
+            oder vor Ort in Zürich.
           </p>
         </div>
 

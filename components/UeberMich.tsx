@@ -70,7 +70,16 @@ export function UeberMich() {
               In meinem Unterricht steht{" "}
               <span className="font-semibold text-ink">dein Lernerfolg</span> im
               Mittelpunkt. Es begeistert mich jedes Mal zu sehen, wie meine
-              Schüler:innen mit jeder Lektion Fortschritte machen.
+              Schülerinnen und Schüler mit jeder Lektion Fortschritte machen.
+            </p>
+            <p>
+              Ein grosser Teil meiner Schülerinnen und Schüler beginnt erst
+              dann mit Spanisch, wenn sie{" "}
+              <span className="font-semibold text-ink">
+                endlich die Zeit dafür haben
+              </span>
+              . Aus Erfahrung kann ich dir sagen: das sind oft die
+              motiviertesten.
             </p>
           </div>
 
