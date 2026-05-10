@@ -9,6 +9,7 @@ import { StickyMobileCta } from "@/components/StickyMobileCta";
 import { Testimonials } from "@/components/Testimonials";
 import { UeberMich } from "@/components/UeberMich";
 import { Vorteile } from "@/components/Vorteile";
+import { ZuAlt } from "@/components/ZuAlt";
 import { EMAIL } from "@/lib/links";
 
 const STRUCTURED_DATA = {
@@ -37,12 +38,26 @@ const STRUCTURED_DATA = {
   founder: { "@type": "Person", name: "Cristina Caamaño" },
 };
 
-export default function Home() {
+type PageProps = {
+  searchParams?: {
+    ad?: string;
+  };
+};
+
+function getAdVariant(ad?: string): "a" | "b" | "c" {
+  if (ad === "b" || ad === "c") return ad;
+  return "a";
+}
+
+export default function Home({ searchParams }: PageProps) {
+  const adVariant = getAdVariant(searchParams?.ad);
+
   return (
     <>
       <Header />
       <main>
-        <Hero />
+        <Hero adVariant={adVariant} />
+        <ZuAlt />
         <Vorteile />
         <Methode />
         <Preis />

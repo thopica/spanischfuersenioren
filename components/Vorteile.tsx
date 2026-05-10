@@ -17,9 +17,10 @@ type Vorteil = {
 const VORTEILE: Vorteil[] = [
   {
     icon: Coffee,
-    title: "Ganz auf dich abgestimmt",
+    title:
+      "Du lernst, was dir wichtig ist: nach deinem Tempo, nicht nach Stundenplan",
     description:
-      "Wir lernen, was dich wirklich interessiert: das Gespräch im Café in Sevilla, die Speisekarte in Valencia, der Anruf bei den Nachbarn in deinem Ferienhaus. Kein starrer Lehrplan.",
+      "Vielleicht möchtest du auf deiner nächsten Reise nicht nur Tourist sein, sondern dich wirklich verständigen. Vielleicht planst du, neue Länder zu erkunden: Spanien, Argentinien, Mexiko, Costa Rica. Vielleicht möchtest du im Restaurant in Andalusien selber bestellen, ohne auf die englische Karte zu zeigen. Erzähl mir, was du erreichen willst. Daran richte ich jede Lektion aus.",
   },
   {
     icon: CalendarHeart,
@@ -29,10 +30,9 @@ const VORTEILE: Vorteil[] = [
   },
   {
     icon: Clock,
-    title: "60 echte Minuten, keine «Schulstunde»",
+    title: "60 echte Minuten, ohne Hetze",
     description:
-      "Viele unterrichten 45 Minuten und nennen das eine Stunde. Bei mir bekommst du volle 60.",
-    highlight: "33 % mehr als üblich",
+      "Wir nehmen uns Zeit. Wenn du etwas dreimal hören willst, hörst du es dreimal. Wenn du eine Pause brauchst, machen wir Pause. Eine Lektion bei mir ist keine Schulstunde, sondern wie ein Kaffee mit einer Freundin, die zufällig Spanisch unterrichtet.",
   },
   {
     icon: Laptop,
@@ -45,6 +45,12 @@ const VORTEILE: Vorteil[] = [
     title: "Keine Abos. Keine Verpflichtung.",
     description:
       "CHF 60 pro Lektion. Du buchst, wann es passt. Ferien, Arzttermin, Besuch von den Enkeln? Kein Problem.",
+  },
+  {
+    icon: Coffee,
+    title: "«Kein Talent für Sprachen»? Das hat fast nichts mit Talent zu tun.",
+    description:
+      "Wenn du in der Schule «schlecht in Französisch» warst, lag das meistens am Klassentempo, an den Noten und an der Angst, sich vor 25 Mitschülern zu blamieren. All das gibt es bei mir nicht. 1:1, kein Druck, kein Vergleich. Du wirst überrascht sein, wie anders sich das anfühlt.",
   },
 ];
 
@@ -60,7 +66,7 @@ export function Vorteile() {
             Warum dieser Unterricht zu dir passt
           </h2>
           <p className="mt-3 text-base text-ink-soft sm:text-lg">
-            Kein starres Schulbuch, kein Druck. Einfach Spanisch, so wie du es
+            Kein starrer Lehrplan, kein Druck. Einfach Spanisch, so wie du es
             dir vorgestellt hast.
           </p>
         </div>

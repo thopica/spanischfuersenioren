@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
@@ -9,11 +9,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const fraunces = Fraunces({
+const manrope = Manrope({
   variable: "--font-fraunces",
   subsets: ["latin"],
   display: "swap",
-  axes: ["opsz"],
 });
 
 const META_PIXEL_ID = "838735575945300";
@@ -74,7 +73,7 @@ export default function RootLayout({
   return (
     <html
       lang="de-CH"
-      className={`${inter.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${inter.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full">
         {children}

@@ -83,7 +83,7 @@ export function Kontakt() {
           email: isEmail ? data.kontakt : FALLBACK_REPLY_EMAIL,
           kontakt: data.kontakt,
           kontakt_typ: isEmail ? "E-Mail" : "Telefon / anderes",
-          message: data.message?.trim() || "—",
+          message: data.message?.trim() || "(keine Nachricht)",
         }),
       });
 
@@ -138,6 +138,57 @@ export function Kontakt() {
         <ul className="mt-10 grid gap-4 md:mt-14 md:grid-cols-3">
           <li>
             <a
+              href="#kontakt-form"
+              className="group flex h-full flex-col rounded-3xl bg-ink p-6 text-cream shadow-md ring-1 ring-ink/20 transition hover:-translate-y-0.5 hover:bg-brand-600 hover:shadow-lg"
+            >
+              <span
+                aria-hidden
+                className="grid size-12 place-items-center rounded-2xl bg-brand-50 text-brand-600 transition group-hover:bg-cream group-hover:text-brand-700"
+              >
+                <Mail className="size-6" strokeWidth={2.2} />
+              </span>
+              <h3 className="mt-5 font-display text-lg font-semibold">
+                Formular ausfüllen
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-cream/85">
+                Schreib mir hier kurz, was du lernen möchtest. Drei Felder,
+                fertig.
+              </p>
+              <span className="mt-auto inline-flex min-h-11 items-center gap-1 pt-4 text-sm font-semibold text-brand-50">
+                Zum Formular <ArrowDown className="size-4" />
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackLead("whatsapp-kontakt-card")}
+              className="group flex h-full flex-col rounded-3xl bg-success-dark p-6 text-white shadow-md ring-1 ring-success-dark/40 transition hover:-translate-y-0.5 hover:bg-success hover:shadow-lg"
+            >
+              <span
+                aria-hidden
+                className="grid size-12 place-items-center rounded-2xl bg-white/15 text-white transition group-hover:bg-white group-hover:text-success-dark"
+              >
+                <MessageCircle className="size-6" strokeWidth={2.2} />
+              </span>
+              <h3 className="mt-5 font-display text-lg font-semibold">
+                WhatsApp
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/90">
+                Eine kurze Nachricht reicht. Ich antworte meist innerhalb
+                weniger Stunden.
+              </p>
+              <span className="mt-auto inline-flex min-h-11 items-center gap-1 pt-4 text-sm font-semibold">
+                Auf WhatsApp schreiben <ArrowRight className="size-4" />
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a
               href={PHONE_TEL}
               onClick={() => trackLead("phone-kontakt-card")}
               className="group flex h-full flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-ink/5 transition hover:-translate-y-0.5 hover:shadow-md"
@@ -158,57 +209,6 @@ export function Kontakt() {
               <p className="mt-2 text-sm leading-relaxed text-ink-soft">
                 {PHONE_HOURS}
               </p>
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#kontakt-form"
-              className="group flex h-full flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-ink/5 transition hover:-translate-y-0.5 hover:shadow-md"
-            >
-              <span
-                aria-hidden
-                className="grid size-12 place-items-center rounded-2xl bg-brand-50 text-brand-500 transition group-hover:bg-brand-400 group-hover:text-cream"
-              >
-                <Mail className="size-6" strokeWidth={2.2} />
-              </span>
-              <h3 className="mt-5 font-display text-lg font-semibold text-ink">
-                Formular ausfüllen
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                Schreib mir hier kurz, was du lernen möchtest. Drei Felder,
-                fertig.
-              </p>
-              <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-semibold text-brand-600">
-                Zum Formular <ArrowDown className="size-4" />
-              </span>
-            </a>
-          </li>
-
-          <li>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackLead("whatsapp-kontakt-card")}
-              className="group flex h-full flex-col rounded-3xl bg-white p-6 shadow-sm ring-1 ring-ink/5 transition hover:-translate-y-0.5 hover:shadow-md"
-            >
-              <span
-                aria-hidden
-                className="grid size-12 place-items-center rounded-2xl bg-success/10 text-success-dark transition group-hover:bg-success group-hover:text-white"
-              >
-                <MessageCircle className="size-6" strokeWidth={2.2} />
-              </span>
-              <h3 className="mt-5 font-display text-lg font-semibold text-ink">
-                WhatsApp
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                Eine kurze Nachricht reicht. Ich antworte meist innerhalb
-                weniger Stunden.
-              </p>
-              <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-semibold text-success-dark">
-                Auf WhatsApp schreiben <ArrowRight className="size-4" />
-              </span>
             </a>
           </li>
         </ul>
@@ -232,6 +232,10 @@ export function Kontakt() {
                 </h3>
                 <p className="mt-1 text-sm text-ink-soft">
                   Drei Felder. Mehr brauche ich nicht.
+                </p>
+                <p className="mt-2 text-sm text-ink-soft/90">
+                  Auch «absolut bei null» ist eine vollkommen gute Antwort. Du
+                  musst nichts vorbereiten.
                 </p>
               </div>
 
@@ -347,7 +351,7 @@ function Field({
       {hint && !error && (
         <span className="mt-0.5 block text-sm text-ink-soft">{hint}</span>
       )}
-      {/* Password managers (e.g. LastPass) inject nodes into inputs — suppress mismatch noise */}
+      {/* Password managers (e.g. LastPass) inject nodes into inputs; suppress mismatch noise */}
       <div className="mt-1.5" suppressHydrationWarning>
         {children}
       </div>

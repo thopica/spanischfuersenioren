@@ -8,6 +8,12 @@ type Testimonial = {
 
 const TESTIMONIALS: Testimonial[] = [
   {
+    name: "Verena, 64",
+    role: "Wädenswil",
+    quote:
+      "Ich hatte Sorge, ob das in meinem Alter noch geht. Cristina hat mir vom ersten Tag an das Gefühl gegeben: doch, das geht. Und wie!",
+  },
+  {
     name: "Margrit, 68",
     role: "Küsnacht",
     quote:
@@ -20,10 +26,10 @@ const TESTIMONIALS: Testimonial[] = [
       "Wir verbringen jedes Jahr drei Monate in Andalusien. Beim letzten Besuch konnte ich zum ersten Mal mit den Nachbarn richtig plaudern. Das war ein Moment.",
   },
   {
-    name: "Verena, 64",
-    role: "Wädenswil",
+    name: "Peter, 66",
+    role: "Zürich",
     quote:
-      "Ich hatte Sorge, ob das in meinem Alter noch geht. Cristina hat mir vom ersten Tag an das Gefühl gegeben: doch, das geht. Und wie!",
+      "In der Schule hatte ich in Französisch nur Vieren. Ich dachte, Sprachen sind einfach nichts für mich. Bei Cristina merke ich: das war damals nicht mein Problem, sondern das Klassenzimmer.",
   },
 ];
 

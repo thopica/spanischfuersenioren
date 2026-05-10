@@ -33,7 +33,12 @@ export function Preis() {
           gratis, damit du in Ruhe schauen kannst, ob es passt.
         </p>
 
-        <div className="mt-12 rounded-[2rem] bg-white p-7 text-left text-ink shadow-2xl shadow-black/30 ring-1 ring-white/10 sm:p-10">
+        <div className="mx-auto mt-8 max-w-2xl rounded-2xl border border-white/20 bg-white/8 px-5 py-4 text-left text-base leading-relaxed text-cream/90">
+          Risikofrei: Erste Lektion gratis. Danach Lektion für Lektion bezahlt.
+          Aufhören jederzeit, ohne Kündigung.
+        </div>
+
+        <div className="mt-6 rounded-[2rem] bg-white p-7 text-left text-ink shadow-2xl shadow-black/30 ring-1 ring-white/10 sm:p-10">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-success/10 px-3 py-1 text-xs font-semibold text-success-dark">

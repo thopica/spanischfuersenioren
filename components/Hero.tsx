@@ -3,7 +3,19 @@ import { ArrowRight, MessageCircle, Phone, Star } from "lucide-react";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/links";
 
-export function Hero() {
+const HERO_HEADLINES = {
+  a: "Endlich Spanisch lernen.",
+  b: "Spanisch für deine Reisen und für die Gespräche, auf die du dich freust.",
+  c: "Spanisch lernen ab 60: gut für den Kopf, schön für den Alltag.",
+} as const;
+
+type HeroVariant = keyof typeof HERO_HEADLINES;
+
+type HeroProps = {
+  adVariant?: HeroVariant;
+};
+
+export function Hero({ adVariant = "a" }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-cream via-cream to-brand-50/70" />
@@ -18,37 +30,22 @@ export function Hero() {
 
       <div className="mx-auto grid max-w-6xl gap-10 px-4 pt-10 pb-16 md:grid-cols-2 md:items-center md:gap-12 md:px-8 md:pt-16 md:pb-24 lg:gap-16 lg:pt-20">
         <div className="flex flex-col">
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-medium uppercase tracking-wider text-brand-700">
-            <span aria-hidden>★</span> Privatunterricht in Zürich &amp; online
-          </span>
-
-          <h1 className="mt-5 font-display text-[2.25rem] font-semibold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-[3.5rem]">
-            Endlich{" "}
-            <span className="relative whitespace-nowrap text-brand-500">
-              Spanisch
-              <svg
-                aria-hidden
-                className="absolute -bottom-2 left-0 w-full text-brand-300"
-                viewBox="0 0 200 12"
-                fill="none"
-              >
-                <path
-                  d="M2 9C50 3 150 3 198 9"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>{" "}
-            lernen, in deinem Tempo.
+          <h1 className="font-display text-[2.25rem] font-semibold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-[3.5rem]">
+            {HERO_HEADLINES[adVariant]}
           </h1>
 
+          <p className="mt-4 max-w-xl text-lg font-medium leading-snug text-ink-soft">
+            Privater Spanischunterricht für 60+ in Zürich und online
+          </p>
+
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
-            Du hast es dir schon lange vorgenommen.{" "}
-            <span className="font-semibold text-ink">Jetzt ist die Zeit da.</span>{" "}
             Persönlicher Einzelunterricht mit Cristina, Muttersprachlerin aus
-            Ecuador. Bei dir zuhause online oder vor Ort in Zürich. 60 Minuten
-            pro Lektion. Keine Abos, keine Pflicht zu Hausaufgaben.
+            Ecuador, seit 15 Jahren spezialisiert auf Erwachsene, die später
+            anfangen. Kein Druck, keine Gruppe, kein starrer Lehrplan. 60
+            Minuten echte Zeit nur für dich.{" "}
+            <span className="font-semibold text-ink">
+              Die erste Lektion ist gratis.
+            </span>
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -64,7 +61,7 @@ export function Hero() {
               className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-ink/15 bg-white px-7 text-base font-semibold text-ink transition hover:border-brand-400 hover:bg-brand-50 hover:text-brand-700"
               aria-label={`Cristina anrufen: ${PHONE_DISPLAY}`}
             >
-              <Phone className="size-5" /> Anrufen: {PHONE_DISPLAY}
+              <Phone className="size-5" /> {PHONE_DISPLAY}
             </a>
           </div>
 
@@ -89,8 +86,7 @@ export function Hero() {
                   />
                 ))}
               </div>
-              <span className="font-semibold text-ink">4,9 / 5</span>
-              <span>von Schülerinnen und Schülern</span>
+              <span>Schülerinnen und Schüler zwischen 55 und 82</span>
             </div>
             <span aria-hidden className="hidden h-4 w-px bg-ink/15 sm:block" />
             <span>

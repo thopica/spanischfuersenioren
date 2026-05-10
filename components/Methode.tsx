@@ -13,7 +13,7 @@ const STEPS: Step[] = [
     number: "01",
     title: "Wir reden über dich.",
     description:
-      "In der ersten Lektion erzählst du mir, warum du Spanisch lernen möchtest. Vielleicht der Schwiegersohn aus Madrid. Vielleicht das Ferienhaus an der Costa Blanca. Vielleicht einfach, weil die Sprache so schön klingt. Darauf baue ich den Unterricht auf.",
+      "In der ersten Lektion erzählst du mir, warum du Spanisch lernen möchtest. Darauf baue ich den Unterricht, passend zu dir und nicht nach einem starren Programm.",
     icon: Heart,
   },
   {

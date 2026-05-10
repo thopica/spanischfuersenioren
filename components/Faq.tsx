@@ -13,6 +13,12 @@ const FAQS: FaqItem[] = [
   },
   {
     question:
+      "Mein Gedächtnis ist nicht mehr das beste. Kann ich mir überhaupt noch Vokabeln merken?",
+    answer:
+      "Ja. Und das, was du in der Schule über Auswendiglernen gelernt hast, kannst du fast vergessen. Wir lernen Spanisch durch Sprechen, durch Wiederholung in echten Sätzen, durch Verbindung zu Dingen, die dich interessieren. Das bleibt anders hängen als eine Vokabelliste, auch im Alter. Viele meiner Schülerinnen sind selbst überrascht, wie viel sie nach drei Wochen schon sagen können.",
+  },
+  {
+    question:
       "Ich kenne mich mit Computern nicht so gut aus. Kann ich trotzdem online lernen?",
     answer:
       "Ja, und ich helfe dir Schritt für Schritt. Wir nutzen Zoom. Das ist ein Programm, das ich dir einmal kurz einrichte (auf Wunsch auch telefonisch). Danach ist es ein Klick, und wir sind verbunden. Falls online für dich nicht das Richtige ist, treffen wir uns einfach bei mir in Zürich.",
@@ -26,6 +32,11 @@ const FAQS: FaqItem[] = [
     question: "Muss ich Hausaufgaben machen?",
     answer:
       "Nein, nichts muss. Wer mag, bekommt von mir Material zum Üben zwischen den Lektionen. Wer einfach nur in der Stunde lernen möchte, ist auch willkommen.",
+  },
+  {
+    question: "Arbeitest du mit einem Lehrbuch?",
+    answer:
+      "Das hängt von dir ab. Manche Schülerinnen wollen ein klares, strukturiertes Vorgehen mit einem Buch. Dafür empfehle ich dir ein passendes. Andere lernen lieber frei, mit eigenen Themen und Materialien, die ich für dich zusammenstelle. In der ersten Lektion finden wir gemeinsam heraus, was zu dir passt.",
   },
   {
     question: "Wann findet der Unterricht statt?",
